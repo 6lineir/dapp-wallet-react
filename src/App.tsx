@@ -1,15 +1,15 @@
 import './App.scss';
 import './trackers';
-import {THEME, TonConnectUIProvider} from "@tonconnect/ui-react";
-import {Footer} from "./components/Footer/Footer";
-import {Header} from "./components/Header/Header";
-import {TxForm} from "./components/TxForm/TxForm";
+import { THEME, TonConnectUIProvider } from "@tonconnect/ui-react";
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { TxForm } from "./components/TxForm/TxForm";
 
 function App() {
   return (
     <TonConnectUIProvider
-      manifestUrl="/public/tonconnect-manifest.json"
-      uiPreferences={{theme: THEME.DARK}}
+      manifestUrl="https://raw.githubusercontent.com/6lineir/dapp-wallet-react/main/public/tonconnect-manifest.json"
+      uiPreferences={{ theme: THEME.DARK }}
       walletsListConfiguration={{
         includeWallets: [
           {
@@ -37,10 +37,10 @@ function App() {
       }}
     >
       <div className="app">
-        <Header/>
-        <TxForm/>
+        <Header />
+        <TxForm />
         {/*<TonProofDemo />*/}
-        <Footer/>
+        <Footer />
       </div>
     </TonConnectUIProvider>
   )
